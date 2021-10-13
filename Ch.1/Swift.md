@@ -113,7 +113,7 @@ Obj-C, Rupy, Python, C#, Rust, Haskell, CLU 등 많은 프로그래밍 언어의
 
 - 중첩 제네릭 허용
 - 제네릭 타입 확장 시, where 절 사용하여 연관 타입에 대한 제약 가능
-- Collection 타입을 받는 UnsafeMutablePointer.initialize(from:) 이 UnsafeMutableBufferPointer.initialize<S>(from:S) 로 대체
+- Collection 타입을 받는 UnsafeMutablePointer.initialize(from:) 이 UnsafeMutableBufferPointer.initialize\<S\>(from:S) 로 대체
 - Sequence 프로토콜에 클로저를 매개변수로 갖는 drop과 prefix 메소드 추가
 - 실패 가능한 숫자 변환 이니셜라이저 추가
 - 선언 속성 중 available 속성의 매개 변수로 스위프트 언어 버전을 사용 할 수 있게 되었다.
