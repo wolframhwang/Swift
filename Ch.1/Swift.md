@@ -116,6 +116,10 @@ Obj-C, Rupy, Python, C#, Rust, Haskell, CLU 등 많은 프로그래밍 언어의
 - Collection 타입을 받는 UnsafeMutablePointer.initialize(from:) 이 UnsafeMutableBufferPointer.initialize<S>(from:S) 로 대체
 - Sequence 프로토콜에 클로저를 매개변수로 갖는 drop과 prefix 메소드 추가
 - 실패 가능한 숫자 변환 이니셜라이저 추가
+- 선언 속성 중 available 속성의 매개 변수로 스위프트 언어 버전을 사용 할 수 있게 되었다.
+- 조건 부 컴파일 블록에서 스위프트 버전 조건에 패치 버전 숫자를 사용 할 수 있게 되었다.
+- 이제 여러 매개변수를 갖는 함수와 튜플 매개변수 하나를 갖는 함수를 구분한다.
+  
   
   
   
