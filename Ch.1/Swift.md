@@ -119,6 +119,81 @@ Obj-C, Rupy, Python, C#, Rust, Haskell, CLU 등 많은 프로그래밍 언어의
 - 선언 속성 중 available 속성의 매개 변수로 스위프트 언어 버전을 사용 할 수 있게 되었다.
 - 조건 부 컴파일 블록에서 스위프트 버전 조건에 패치 버전 숫자를 사용 할 수 있게 되었다.
 - 이제 여러 매개변수를 갖는 함수와 튜플 매개변수 하나를 갖는 함수를 구분한다.
+
+
+## 3.1 -> 4.0
+
+- 단방향 범위 연산자 추가
+- String 타입이 다시 Collection Protocol 준수
+- Swift가 UniCode-9 을 따른다.
+- 여러 줄 String Literal 문법 추가
+- Substring Type과 StringProtocol 추가
+- Character 타입에 unicodeScalars 프로퍼티 추가
+- 키와 값 시퀀스를 사용해 새로운 Dictionary 인스턴스를 생성 할 수 있게 되었다.
+- 키와 값을 기존의 Dictionary 인스턴스에 병합 할 수 있게 되었다.
+- Dictionary 와 Set의 filter 메서드 결과 타입이 Array 대신 원래의 Dictionary , Set 타입으로 변경
+- Dictionary Type 에 mapValues(_ :) 추가
+- Dictionary Type 에 reserveCapacity(_ :) 메서드 추가
+- Dictionary Type 에 기본 값을 돌려 줄 수 있는 서브 스크립트 메소드 추가
+- KeyPath 타입 추가
+- 프로토콜과 연관 타입에 where 절을 이용하여 타입 제약 생김
+- 서브 스크립트가 제네릭 매개변수와 제네릭 반환 타입을 사용 할 수 있게 되었다.
+- private 접근 수준의 특성이 일부 변경
+- Codable 프로토콜 추가
+- JSONEncoder, JSONDecoder 추가
+- 여러 프로토콜 합성해서 특정 클래스가 해당 프로토콜을을 준수 해야 함을 표현 할 수 있다.
+- 컴파일러가 암시적으로 추가했던 objc 속성을 대부분의 위치에서 프로그래머가 명확히 명시해야한다.
+- 프로토콜 Extension 에서 final 수식어 사용 불가
+
+## 4.0 -> 4.1
+
+- flatmap() 메소드 몇몇 경우에 이름이 compactMap() 으로 변경
+- 타입의 프로퍼티가 모두 Equatable 프로토콜을 준수 한다면 Equtable 프로토콜을 채택하기만 해도 Equtable 프로토콜을 준수하는 타입이 된다.
+- 익스텐션 연관 타입에 조건부 제약 추가
+- Codable 프로토콜을 위한 KeyDecodingStrategy 추가
+- 프로토콜 연관 타입을 프로토콜 자신으로 지정 가능
+- 조건부 컴파일 블록에 플랫폼 확인을 위한 canImport(), targetEnvironment() 추가
+
+## 4.1 -> 4.2
+
+- 열거형 타입에 열거형 케이스 순회 기능 추가
+- 컴파일 시점 진단 구문 추가
+- dynamicMemberLookup 속성 추가
+- usableFromInline 속성 추가
+- 스위프트 4.1 버전에서 추가된 엑스텐션 연관 타입 조건부 제약 기능 개선
+- 임의의 수를 생성하는 random() 메소드와 컬렉션 요소를 임의의 순서로 뒤섞을 수 있는 shuffle() 및 shuffled() 메서드 추가
+- Bool 타입의 인스턴스 값을 잔전 할 수 있는 toggle() 메서드 추가.
+- 컬렉션 요소를 특정 조건에 따라 제거 할 수 있는 removeAll(where:) 추가
+- Sequenc의 모든 요소가 적절한 조건을 모두 충족하는지 확인 할 수 있는 allSatisfy() 추가
+- requires_stored_property_inits와 warn_unqalified_access 속성 추가
+- 리터럴 표현에 #dsohandle 추가
+
+## 4.1 -> 5.0
+
+- 문자열 큰 따옴표 바깥쪽으로 #을 붙혀 쓰면 String 문자열을 있는 그대로 표현하는 기능 추가
+- 문자열 보간 법을 통해 문자열을 사용자화 할 수 있는 appendInterpolation() 메서드 추가
+- dynamicCallable 속성 추가
+- Result 타입 추가
+- 열거형에 사용 할 수 있는 unknown 추가
+- try? 표현을 통한 결과가 옵셔널 이라도 이중 옵셔널로 반환하지 않고 단순 옵셔널로 반환 하도록 변경
+- 정수 타입에 isMultiple(of:) 추가
+- 딕셔너리에 compactMapValues() 추가
+- 자기 표현 키로(\.self) 추가
+- 조건부 컴파일 블록에서 미만 연산자 사용 가능
+
+## 5.0 -> 5.1
+
+- some 이용한 불명확 타입 기능 추가
+- 함수와 연산 프로퍼티에서 마지막 줄의 코드가 return 키워드 없이 값을 반환 할수 있게 됌
+- 구조체에서 기본 멤버와이즈 이니셜라이저 외에 추가로 기본 값을 가지는 프로퍼티를 매개변수에서 제외한 멤버와이즈 이니셜라이저 생성
+- Self가 현재 탙입(클래스,구조체,열거형 등) 을 가리 킬수 있도록 사용처 확대
+- 타입 서브스크립트 기능 추가
+- 정렬된 컬렉션 사이의 다른 점을 연산할 수 있는 difference(From:) 메서드 추가
+- 초기화 되지 않은 배열 생성 가능
+- 강한 타입의 키로 구현을 지원하도록 dynamicMemberLookup 속성 기능 확장
+- propertyWrapper 선언 속성 추가
+
+
   
   
   
